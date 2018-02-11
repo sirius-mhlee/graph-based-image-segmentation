@@ -16,4 +16,7 @@ Usage
     ex)
     python ImageSegmentation.py 0.5 500 50 ./example/lena.jpg ./example/lena_result.jpg
 
-![lena.jpg](./example/lena.jpg)   ![lena_result.jpg](./example/lena_result.jpg)
+Result
+------
+
+![lena.jpg](./example/lena.jpg) ![lena_result.jpg](./example/lena_result.jpg)
