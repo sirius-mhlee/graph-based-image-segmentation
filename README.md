@@ -11,9 +11,9 @@ http://cs.brown.edu/~pff/segment/
 Usage
 -----
 
-    python ImageSegmentation.py input_image_file sigma k min_size output_image_file
+    python ImageSegmentation.py sigma k min_size input_image_file output_image_file
     
     ex)
-    python ImageSegmentation.py ./example/lena.jpg 0.5 500 50 ./example/lena_result.jpg
+    python ImageSegmentation.py 0.5 500 50 ./example/lena.jpg ./example/lena_result.jpg
 
 ![lena.jpg](./example/lena.jpg) ![lena_result.jpg](./example/lena_result.jpg)
