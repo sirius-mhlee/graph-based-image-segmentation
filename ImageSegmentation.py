@@ -4,7 +4,6 @@ import random as rand
 
 import numpy as np
 
-import SmoothFilter as sf
 import GraphOperator as go
 
 def generate_image(ufset, width, height):
@@ -24,14 +23,12 @@ def main():
     sigma = float(sys.argv[1])
     k = float(sys.argv[2])
     min_size = float(sys.argv[3])
-    img = cv2.imread(sys.argv[4])
 
-    b, g, r = cv2.split(img)
-    gaussian_mask = sf.get_gaussian_mask(sigma, 3)
-    
-    r = sf.filter_image(r, gaussian_mask)
-    g = sf.filter_image(g, gaussian_mask)
-    b = sf.filter_image(b, gaussian_mask)
+    img = cv2.imread(sys.argv[4])
+    float_img = np.asarray(img, dtype=float)
+
+    gaussian_img = cv2.GaussianBlur(float_img, (5, 5), sigma)
+    b, g, r = cv2.split(gaussian_img)
     smooth_img = (r, g, b)
 
     height, width, channel = img.shape
